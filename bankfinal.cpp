@@ -15,7 +15,7 @@ int main()
 l1:
   void clearScreen();
   clearScreen();
-  cout << "\n-----------------------------------------|| WELCOME TO PUNJAB NATIONAL BANK ||-----------------------------------------\n\n";
+  cout << "\n-----------------------------------------|| WELCOME TO STATE BANK OF INDIA ||-----------------------------------------\n\n";
   cout << "\npress 0 to open account";
   cout << "\npress 1 to deposit";
   cout << "\npress 2 to withdraw";
