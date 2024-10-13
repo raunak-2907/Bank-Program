@@ -4,7 +4,7 @@ using namespace std;
 // structure to store data
 struct bank
 {
-  string name, address, emailid, dob, aadharno, fathername, password, mobileno;
+  string name, address, emailid, dob, aadharno, fathername, password, mobileno, Keyword;
   long int balance, accountno;
 };
 bank b[20];
@@ -109,6 +109,8 @@ void accountopen()
   cin >> b[t].aadharno;
   cout << "\ncreate your password:";
   cin >> b[t].password;
+  cout << "\nenter keyword to change password:";
+  cin >> b[t].Keyword;
   cout << "\ninitial ammount to deposit:";
   cin >> b[t].balance;
   b[t].accountno = 12345670 + t;
@@ -304,22 +306,37 @@ void editdata()
 void passchange()
 {
   long int chaccountno;
-  string chpassword;
-  int i;
+  string chpassword,chkeyword;
+  int i,choice;
   cout << "\nenter your account number:";
   cin >> chaccountno;
   i = chaccountno - 12345670;
   if (chaccountno == b[i].accountno)
   {
-    cout << "\nenter your password:";
-    cin >> chpassword;
-    if (b[i].password == chpassword)
+    cout << "\nRemember Your Old Password?\n1.Yes\n2.No";
+    cin >> choice;
+    if(choice==1)
     {
-      cout << "your password matched please provide ur new password" << endl;
-      cin >> b[i].password;
+      cout << "\nenter your password:";
+      cin >> chpassword;
+      if (b[i].password == chpassword)
+      {
+        cout << "your password matched please provide ur new password" << endl;
+        cin >> b[i].password;
+      }
+      else
+        cout << "Incorrect Password";
     }
     else
-      cout << "Incorrect Password";
+    {
+      cout << "\nenter your keyword:";
+      cin >> chkeyword;
+      if(chkeyword == b[i].keyword)
+      {
+        cout << "\nenter your new password:";
+        cin >> b[i].password; 
+      }
+    }
   }
   else
     cout << "\nno account found";
