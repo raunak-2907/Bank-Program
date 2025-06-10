@@ -1,5 +1,5 @@
 # Bank-Program
-A basic C++ program that resembles some functionalities of bank
+A basic C++ and JAVA program that resembles some functionalities of bank
 
 
 
@@ -13,3 +13,4 @@ Deposit Funds: Users can deposit money into their accounts.
 Withdraw Funds: Users can withdraw money, ensuring sufficient balance.
 Check Balance: Users can view their account balance.
 Account Details: Users can view all details associated with their accounts.
+Check Transactions: Users can view their transaction history.
